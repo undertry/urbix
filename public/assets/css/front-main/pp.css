@@ -1,0 +1,905 @@
+/* TODO: root section starts here */
+
+:root {
+  --color-primary: #0D1117;
+  --color-secondary: #f9f9f9;
+  --color-secondary2: #868e96;
+  --color-terciary: #30353d;
+  --color-terciary-translucent: #30353d97;
+  --color-terciary2-translucent: #dbdee497;
+  --color-main2: #d32222;
+  --color-main: rgb(57, 239, 12);
+  --color-pure: #ffffff;
+  --color-impure: #000000;
+}
+
+
+/* TODO: root section ends here */
+
+
+/* ? tipografias section starts here */
+
+@font-face {
+  font-family: "Mars Model";
+  src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arame-Thin";
+  src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BasementGrotesque";
+  src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nevolasty-Light";
+  src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BigCityVibes";
+  src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Headshots";
+  src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "DistortionDosAnalogue";
+  src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "PIGARNOS-NEUE-Regular";
+  src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "StretchPro";
+  src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "kenyan-coffee";
+  src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akira-Expanded";
+  src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BLUE-OCEAN";
+  src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CHARLEY";
+  src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "VAL";
+  src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akira";
+  src: url("../fonts/Akira.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "nothing";
+  src: url("../fonts/nothing.ttf") format("truetype");
+}
+
+
+/* ? tipografias section ends here */
+
+
+/* * HTML BODY section starts here */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Monument Extended", sans-serif;
+  overflow: hidden;
+  background: var(--color-pure);
+}
+
+
+/* ? Dark-Mode Body */
+
+body.dark-mode {
+  background: var(--color-primary);
+}
+
+/* TODO: Cursor Body */
+
+.cursor {
+  pointer-events: none;
+  position: absolute;
+  padding: 0.9vw;
+  border: 2px solid var(--color-impure);
+  border-radius: 50%;
+  z-index: 200;
+  transition: transform 0.1s ease;
+}
+
+/* ? Dark-Mode Cursor */
+
+body.dark-mode .cursor {
+  border: 2px solid var(--color-pure);
+}
+
+
+/* * HTML BODY section ends here */
+
+
+/* * NAV section starts here */
+.container2 {
+  height: 1vh;
+}
+
+.menu-open {
+  font-family: "nothing";
+  position: absolute;
+  z-index: 100;
+}
+
+/* ? Dark-Mode Menu-Open */
+
+body.dark-mode .menu-open {
+  color: var(--color-pure);
+}
+
+.menu-open,
+.menu-close {
+  position: absolute;
+  top: 0;
+  right: 1vw;
+  padding: 0.5vw;
+  font-size: 1vw;
+  cursor: pointer;
+  z-index: 100;
+  color: var(--color-impure);
+  font-family: "nothing";
+}
+
+.socials {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 40px 100px;
+  z-index: 100;
+}
+
+.socials span {
+  text-transform: uppercase;
+  margin: 0 20px;
+  letter-spacing: 0px;
+  z-index: 100;
+  color: var(--color-impure);
+  font-family: "nothing";
+}
+
+.nav-container {
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-main2);
+  z-index: 100;
+}
+
+.menu__item {
+  position: relative;
+  padding: 0 6vw;
+  z-index: 100;
+
+}
+
+.menu__item-link {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+  z-index: 100;
+  color: var(--color-impure);
+  font-family: "nothing";
+
+}
+
+.menu__item-link::before {
+  all: initial;
+  counter-increment: menu;
+  position: absolute;
+  bottom: 60%;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.menu__item-link:hover {
+  transition-duration: 0.1s;
+  opacity: 0;
+  z-index: 100;
+}
+
+.menu {
+  padding: 10vh 0 25vh;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+  font-size: 7vw;
+  z-index: 100;
+
+}
+
+.marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.marquee__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  opacity: 0;
+  transition: all 0.1s;
+  transform: translateX(60px);
+  z-index: 100;
+
+}
+
+.menu__item-link:hover~.marquee .marquee__inner {
+  opacity: 1;
+  transform: translateX(0px);
+  transition-duration: 0.4s;
+  z-index: 100;
+
+}
+
+.menu__item-link,
+.marquee span {
+  white-space: nowrap;
+  font-size: 7vw;
+  padding: 0 1vw;
+  line-height: 1.15;
+  z-index: 100;
+  color: var(--color-pure);
+  font-family: "nothing";
+}
+
+.marquee span {
+  font-style: italic;
+  z-index: 100;
+  color: var(--color-impure);
+  font-family: "nothing";
+}
+
+
+/* * NAV section ends here */
+
+
+/* * WRAPPER-IMG section stars here */
+
+.wrapper-img {
+  overflow: hidden;
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 30%;
+  height: 80vh;
+
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.box {
+  background: white;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+
+}
+
+
+/* ? Dark-Mode Box */
+
+body.dark-mode .box {
+  background: var(--color-primary);
+  opacity: 0.8;
+}
+
+
+/* * WRAPPER-IMG section ends here */
+
+
+/* * HEADER section starts here */
+
+.header {
+  position: absolute;
+  top: 60%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.header h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  margin: 0;
+  mix-blend-mode: overlay;
+}
+
+.header-1 .letter {
+  display: inline-block;
+  line-height: 1em;
+  color: var(--color-main2);
+  font-family: "Akira";
+}
+
+.header-2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-family: "Akira";
+  color: var(--color-secondary2);
+}
+
+
+/* * HEADER section ends here */
+
+
+/* * HERO-CONTAINER section starts here */
+
+.sidebar-text {
+  position: absolute;
+  top: 20%;
+  right: 7%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(165, 165, 165);
+  font-family: "nothing";
+}
+
+.change {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: "nothing";
+}
+
+
+/* ? Dark-Mode Change */
+
+body.dark-mode .change {
+  color: var(--color-secondary);
+}
+
+.img-nav {
+  position: absolute;
+  right: 13%;
+  bottom: 13%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: grey;
+  font-family: "nothing";
+}
+
+.next {
+  position: relative;
+  top: 40px;
+  left: 80px;
+}
+
+
+/* * HERO-CONTAINER section ends here */
+
+/* ! MEDIA ONLY section starts here */
+
+/* TODO: RESPONSIVE NAV section starts here */
+
+/* ? Resolucion para Monitores */
+
+@media only screen and (max-width: 1920px) {}
+
+@media only screen and (max-width: 1366px) {}
+
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 1233px) {}
+
+
+/* ? Resolucion para Tablets */
+
+@media only screen and (max-width: 1120px) {}
+
+@media only screen and (max-width: 960px) {}
+
+
+/* ? Resolucion para Celulares */
+
+@media only screen and (max-width: 950px) {}
+
+@media only screen and (max-width: 430px) {}
+
+/* TODO: RESPONSIVE NAV section ends here */
+
+/* TODO: RESPONSIVE WRAPPER-IMG section starts here */
+
+/* ? Resolucion para Monitores */
+
+@media only screen and (max-width: 1920px) {
+  .wrapper-img {
+    margin-top: 5%;
+    left: 50%;
+    width: 30%;
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .wrapper-img {
+    margin-top: 5%;
+    left: 50%;
+    width: 35%;
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .wrapper-img {
+    margin-top: 5%;
+    left: 50%;
+    width: 36%;
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 1233px) {
+  .wrapper-img {
+    margin-top: 5%;
+    left: 50%;
+    width: 35%;
+    height: 85vh;
+  }
+}
+
+
+/* ? Resolucion para Tablets */
+
+@media only screen and (max-width: 1120px) {
+  .wrapper-img {
+    margin-top: 9%;
+    left: 50%;
+    width: 37%;
+    height: 85vh;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper-img {
+    margin-top: 19%;
+    left: 50%;
+    width: 40%;
+    height: 85vh;
+  }
+}
+
+
+/* ? Resolucion para Celulares */
+
+@media only screen and (max-width: 950px) {
+  .wrapper-img {
+    margin-top: 19%;
+    left: 50%;
+    width: 40%;
+    height: 85vh;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .wrapper-img {
+    margin-top: 19%;
+    left: 50%;
+    width: 60%;
+    height: 85vh;
+  }
+}
+
+/* TODO: RESPONSIVE WRAPPER-IMG section ends here */
+
+
+/* TODO: RESPONSIVE HEADER section starts here */
+
+/* ? Resolucion para Monitores */
+
+@media only screen and (max-width: 1920px) {
+  .header {
+    top: 60%;
+    left: 28%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .header {
+    top: 65%;
+    left: 26%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .header {
+    top: 65%;
+    left: 25%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 1233px) {
+  .header {
+    top: 60%;
+    left: 24%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+
+/* ? Resolucion para Tablets */
+
+@media only screen and (max-width: 1120px) {
+  .header {
+    top: 60%;
+    left: 23%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .header {
+    top: 70%;
+    left: 23%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+
+/* ? Resolucion para Celulares */
+
+@media only screen and (max-width: 950px) {
+  .header {
+    top: 70%;
+    left: 23%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .header {
+    top: 45%;
+    left: 23%;
+  }
+
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .header-1 .letter {
+    line-height: 1em;
+  }
+
+  .header-2 .letter {
+    line-height: 1em;
+  }
+}
+
+/* TODO: RESPONSIVE HEADER section ends here */
+
+/* TODO: RESPONSIVE HERO-CONTAINER section starts here */
+
+/* ? Resolucion para Monitores */
+
+@media only screen and (max-width: 1920px) {
+  .sidebar-text {
+    top: 20%;
+    right: 7%;
+    font-size: 2vw;
+  }
+
+  .change {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 13%;
+    bottom: 13%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .sidebar-text {
+    top: 20%;
+    right: 7%;
+    font-size: 2vw;
+  }
+
+  .change {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 13%;
+    bottom: 13%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .sidebar-text {
+    top: 20%;
+    right: 7%;
+    font-size: 2vw;
+  }
+
+  .change {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 13%;
+    bottom: 13%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 1233px) {
+  .sidebar-text {
+    top: 20%;
+    right: 7%;
+    font-size: 2vw;
+  }
+
+  .change {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 13%;
+    bottom: 13%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+
+/* ? Resolucion para Tablets */
+
+@media only screen and (max-width: 1120px) {
+  .sidebar-text {
+    top: 20%;
+    right: 7%;
+    font-size: 2vw;
+  }
+
+  .change {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 13%;
+    bottom: 13%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .sidebar-text {
+    top: 20%;
+    right: 4%;
+    font-size: 2vw;
+  }
+
+  .change {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 13%;
+    bottom: 13%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+
+/* ? Resolucion para Celulares */
+
+@media only screen and (max-width: 950px) {
+  .sidebar-text {
+    top: 20%;
+    right: 4%;
+    font-size: 2vw;
+  }
+
+  .change {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 13%;
+    bottom: 13%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .sidebar-text {
+    top: 15%;
+    right: 4%;
+    font-size: 3vw;
+  }
+
+  .change {
+    bottom: 3%;
+    left: 15%;
+  }
+
+  .img-nav {
+    right: 18%;
+    bottom: 32%;
+  }
+
+  .next {
+    top: 40px;
+    left: 80px;
+  }
+}
+
+/* TODO: RESPONSIVE HERO-CONTAINER section ends here */
+
+/* ! MEDIA ONLY section ends here */

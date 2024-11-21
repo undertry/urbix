@@ -1,0 +1,351 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: "sans-serif";
+	scroll-behavior: smooth;
+	text-decoration: none !important;
+	font-family: "nothing";
+	outline: none !important;
+}
+
+
+/* TODO: root section starts here */
+
+:root {
+	--color-primary: #0D1117;
+	--color-secondary: #f9f9f9;
+	--color-secondary2: #868e96;
+	--color-terciary: #30353d;
+	--color-terciary-translucent: #30353d97;
+	--color-terciary2-translucent: #dbdee497;
+	--color-main2: #d32222;
+	--color-main: rgb(57, 239, 12);
+	--color-pure: #ffffff;
+	--color-impure: #000000;
+}
+
+
+/* TODO: root section ends here */
+
+
+/* ? tipografias section starts here */
+
+@font-face {
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "PIGARNOS-NEUE-Regular";
+	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "StretchPro";
+	src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "kenyan-coffee";
+	src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira-Expanded";
+	src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BLUE-OCEAN";
+	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "CHARLEY";
+	src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "VAL";
+	src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira";
+	src: url("../fonts/Akira.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "nothing";
+	src: url("../fonts/nothing.ttf") format("truetype");
+}
+
+
+/* ? tipografias section ends here */
+
+
+/* * HTML BODY section starts here */
+
+html,
+body {
+	background: var(--color-pure);
+}
+
+
+/* ? Dark-Mode Body */
+
+body.dark-mode {
+	background: var(--color-primary);
+}
+
+
+/* TODO: Cursor Body */
+
+.cursor {
+	pointer-events: none;
+	position: absolute;
+	padding: 0.9vw;
+	border: 2px solid var(--color-impure);
+	border-radius: 50%;
+	z-index: 200;
+	transition: transform 0.1s ease;
+}
+
+
+/* ? Dark-Mode Cursor */
+
+body.dark-mode .cursor {
+	border: 2px solid var(--color-pure);
+}
+
+
+/* * HTML BODY section ends here */
+
+
+/* * CONTACT section starts here */
+
+.contact {
+	background: var(--color-pure);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 800px;
+	padding-bottom: 7rem;
+	color: var(--color-impure);
+	font-family: "Nevolasty-Light";
+}
+
+
+/* ? Dark-Mode Contact */
+
+body.dark-mode .contact {
+	background: var(--color-primary);
+	color: var(--color-pure);
+}
+
+h2 span {
+	font-family: "nothing";
+	font-size: 100px;
+	color: var(--color-main2);
+}
+
+.contact form {
+	max-width: 70rem;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+}
+
+.contact form .input-box {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	text-decoration: none;
+	outline: none;
+}
+
+.contact form .input-box .input-field {
+	position: relative;
+	width: 49%;
+	margin: .8rem 0;
+	text-decoration: none;
+	outline: none;
+}
+
+.contact form .input-box .input-field input:focus {
+	outline: none;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+	width: 100%;
+	height: 100%;
+	padding: 1.5rem;
+	font-size: 1.6rem;
+	color: var(--color-impure);
+	background: transparent;
+	border-radius: .1rem;
+	border: .1rem solid var(--color-impure);
+	text-decoration: none;
+	outline: none;
+}
+
+
+/* ? Dark-Mode Input-Box */
+
+body.dark-mode .contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+	color: var(--color-pure);
+	border: .1rem solid var(--color-pure);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+	color: var(--color-secondary2) !important;
+	text-decoration: none;
+	outline: none;
+}
+
+.contact form .focus {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	color: var(--color-main2);
+	border-radius: .1rem;
+	z-index: -1;
+	text-decoration: none;
+	outline: none;
+}
+
+.contact form .textarea-field {
+	position: relative;
+	margin: .8rem 0 2.7rem;
+	display: flex;
+	text-decoration: none;
+	outline: none;
+	color: var(--color-impure);
+}
+
+.contact form .textarea-field textarea {
+	resize: none;
+	text-decoration: none;
+	outline: none;
+	border-color: var(--color-impure);
+	color: var(--color-impure);
+}
+
+
+/* ? Dark-Mode Textarea-Field */
+
+body.dark-mode .contact form .textarea-field textarea {
+	border-color: var(--color-pure);
+	color: var(--color-pure);
+}
+
+.contact form .btn-box.btns .btn {
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+}
+
+.btn-box {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 34.5rem;
+	height: 5rem;
+	text-decoration: none;
+	outline: none;
+}
+
+.btn-box .btn {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 15rem;
+	height: 100%;
+	background: var(--color-main2);
+	border: .2rem solid var(--color-impure);
+	border-radius: .1rem;
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: .1rem;
+	color: var(--color-pure);
+	z-index: 1;
+	overflow: hidden;
+	text-decoration: none;
+	outline: none;
+}
+
+
+/* ? Dark-Mode Btn */
+
+body.dark-mode .btn-box .btn {
+	border: .2rem solid var(--color-pure);
+	color: var(--color-impure);
+}
+
+.btn-box.btns {
+	display: inline-block;
+	width: 15rem;
+	text-decoration: none;
+	outline: none;
+}
+
+.btn-box.btns button a {
+	text-decoration: none;
+	color: var(--color-impure);
+}
+
+
+/* ? Dark-Mode Btns */
+
+body.dark-mode .btn-box.btns button a {
+	color: var(--color-pure);
+}
+
+
+/* * CONTACT section ends here */
